@@ -1,0 +1,13 @@
+Description,Number,Result,StatusCode
+"Factorial of 0 should be 1",0,1,200
+"Factorial of 5 should be 120",5,120,200
+"Factorial of a negative number should return an error message",-5,"Error",400
+"Factorial of a non-integer should return an error message",2.5,"Error",400
+"Factorial of above the maximum allowed integer should return infinity",171,Infinity,200
+"Factorial of the maximum allowed integer should return a valid result",170,7257415615307998967396728211129263114716991681296451376543577798900561843401706157852350749242617459511490991237838520776666022565442753025328900773207510902400430280058295603966612599658257104398558294257568966313439612262571094946806711205568880457193340212661452800000000000000000000000000000000000000000,200
+"Factorial of an empty value should return an error message","","Error",400
+"Factorial of null should return an error message",null,"Error",400
+"Factorial of undefined should return an error message",undefined,"Error",400
+"SQL Injection should be prevented",' OR 1=1 --',"Error",400
+"Cross-Site Scripting (XSS) should be prevented","<script>alert('XSS');</script>","Error",400
+"Special characters should be handled correctly","!@#$%^&*()_+","Error",400
